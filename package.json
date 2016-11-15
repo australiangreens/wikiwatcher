@@ -5,7 +5,7 @@
   "main": "watcher.js",
   "author": "Effy Elden",
   "dependencies": {
-    "wiki-changes": "latest",
+    "wikichanges": "latest",
     "node-slack": "latest"
   }
 }
