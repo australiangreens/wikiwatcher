@@ -4,7 +4,7 @@
   "description": "Watched Wikipedia for edits to Australian Greens related pages and announces in the Australian Greens Slack.",
   "main": "watcher.js",
   "scripts": {
-    "start": "node watcher.ks",
+    "start": "node watcher.js"
   },
   "author": "Effy Elden",
   "dependencies": {
