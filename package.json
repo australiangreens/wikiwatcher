@@ -9,6 +9,7 @@
   "author": "Effy Elden",
   "dependencies": {
     "wikichanges": "latest",
-    "node-slack": "latest"
+    "node-slack": "latest",
+    "pokemon-random-name": "latest"
   }
 }
