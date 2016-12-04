@@ -17,7 +17,7 @@ w.listen(function(change) {
   if (inArray(change.page, pages)) {
     slack.send({
     text: change.page + " has been edited: " + change.url,
-    channel: '#communications',
+    channel: '#mediamonitoring',
     username: 'Wikipedia'
     });
   }
