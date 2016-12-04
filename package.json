@@ -1,6 +1,6 @@
 {
   "name": "wikiwatcher",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Watched Wikipedia for edits to Australian Greens related pages and announces in the Australian Greens Slack.",
   "main": "watcher.js",
   "scripts": {
@@ -9,7 +9,7 @@
   "author": "Effy Elden",
   "dependencies": {
     "wikichanges": "latest",
-    "node-slack": "latest",
+    "slack-node": "latest",
     "pokemon-random-name": "latest"
   }
 }
