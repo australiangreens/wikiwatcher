@@ -16,9 +16,9 @@ var w = new wikichanges.WikiChanges({wikipedias: ["#en.wikipedia"], ircNickname:
 w.listen(function(change) {
   if (inArray(change.page, pages)) {
     slack.send({
-    text: change.page + " has been edited: " + change.url,
+    text: change.user + ": " + change.comment + " - " + change.url,
     channel: '#mediamonitoring',
-    username: 'Wikipedia'
+    username: 'Wikipedia Edits'
     });
   }
 });
