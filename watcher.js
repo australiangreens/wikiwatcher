@@ -1,4 +1,5 @@
 var pokemon = require("pokemon-random-name")();
+var config = require("config");
 var wikichanges = require("wikichanges");
 var Slack = require('slack-node');
 var slack = new Slack();
@@ -15,8 +16,7 @@ function inArray(needle, haystack) {
     }
     return false;
 }
-
-var pages = ["Australian Greens", "Richard Di Natale", "Larissa Waters", "Scott Ludlam", "Adam Bandt", "Rachel Siewert", "Sarah Hanson-Young", "Lee Rhiannon", "Peter Whish-Wilson", "Janet Rice", "Nick McKim", "Robert Simms (politician)", "Jan Barham", "Jeremy Buckingham", "Mehreen Faruqi", "David Shoebridge", "Jenny Leong", "Jamie Parker (politician)", "Tamara Smith", "Greg Barber", "Samantha Dunn", "Colleen Hartland", "Sue Pennicuik", "Nina Springle", "Sam Hibbins", "Ellen Sandell", "Andrea Dawkins", "Cassy O'Connor", "Rosalie Woodruff", "Tammy Franks", "Mark Parnell", "Robin Chapple", "Lynn MacLaren", "Shane Rattenbury", "Greens New South Wales", "Australian Greens Victoria", "Queensland Greens", "Greens Western Australia", "Greens South Australia", "Tasmanian Greens", "ACT Greens", "Northern Territory Greens", "Australian Greens Front Bench", "Tim Clifford (politician)"];
+var pages = config.get('pages');
 
 var w = new wikichanges.WikiChanges({
     wikipedias: ["#en.wikipedia"],
@@ -57,8 +57,8 @@ w.listen(function(change) {
         }]
         slack.webhook({
             attachments: message,
-            channel: '#mediamonitoring',
-            username: 'Wikipedia Edits'
+            channel: config.get('channel'),
+            username: config.get('username'),
         }, function(err, response) {
             console.log(response);
         });
