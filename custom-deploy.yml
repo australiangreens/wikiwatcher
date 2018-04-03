@@ -12,6 +12,6 @@ steps:
     plugins:
       docker-compose#v1.4.0:
         run: kubectl
-        config: docker-compose-utils.yml
+        config: ${HOME}/greenkite/docker-compose.yml
     branches: 'master'
 
