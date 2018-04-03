@@ -1,0 +1,17 @@
+steps:
+  - block: "Confirm deployment to :kubernetes: :red_button: "
+    prompt: "Proceed with deployment?"
+    branches: 'master'
+
+  - wait
+
+  - command: "--context dev.greens.systems set image deployment/wikiwatcher-wikiwatcher wikiwatcher=docker.io/australiangreens/wikiwatcher:${BUILDKITE_BUILD_NUMBER}"
+    label: ":kubernetes: Deploy new wikiwatcher image."
+    agents:
+      queue: elastic
+    plugins:
+      docker-compose#v1.4.0:
+        run: kubectl
+        config: docker-compose-utils.yml
+    branches: 'master'
+
