@@ -367,8 +367,8 @@ when@^3.7.7:
   resolved "https://registry.yarnpkg.com/when/-/when-3.7.8.tgz#c7130b6a7ea04693e842cdc9e7a1f2aa39a39f82"
 
 wikichanges@latest:
-  version "0.2.8"
-  resolved "https://registry.yarnpkg.com/wikichanges/-/wikichanges-0.2.8.tgz#f989fc9aa710d65a2e69fb2d02c2e08bf3ed37e3"
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/wikichanges/-/wikichanges-0.2.9.tgz#5e016c44d2f3607d941a358e3d3c8aafc3969bca"
   dependencies:
     irc "0.5.x"
     underscore "1.8.x"
