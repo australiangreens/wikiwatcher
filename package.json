@@ -8,7 +8,7 @@
   },
   "author": "Effy Elden",
   "dependencies": {
-    "config": "^1.26.2",
+    "config": "^3.2.6",
     "pokemon-random-name": "latest",
     "slack-node": "latest",
     "wikichanges": "latest"
