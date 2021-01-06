@@ -10,7 +10,7 @@
   "dependencies": {
     "config": "^1.26.2",
     "pokemon-random-name": "latest",
-    "slack-node": "latest",
+    "slack-node": "0.2.0",
     "wikichanges": "latest"
   }
 }
